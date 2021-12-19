@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登陆注册</title>
+</head>
+<body>
+
+<h1>注册</h1>
+<!--表单form
+action: 表单提交的位置，可以是网站，也可以是一个请求处理地址
+method: post, get 提交方式
+    get方式提交：我们可以在url中看到我们提交的信息，不安全，但高效
+    post方式提交：比较安全，传输大文件，
+-->
+
+<form action="1.我的第一个网页.html" method="get" target="_blank">
+    <!--type属性: text, password, checkbox, radio, submit, reset, file, hidden, image, button
+        name: 指定表单元素名称
+        value: 默认初始值，radio时必须指定一个值
+        size: 长度
+        maxlength: 最大长度
+        checked: radio/checkbox时，是否被选中
+        readonly: 只读
+        disabled: 禁用
+        hidden: 隐藏，隐藏域
+    -->
+    <!--文本输入框: input type="text"-->
+    <p>名字:
+        <input type="text" name="username" value="admin" maxlength="8" size="30">
+    </p>
+
+    <!--密码输入框: input type="password"-->
+    <p>密码: <input type="password" name="passwd" value="password"> </p>
+
+
+
+    <!--单选框标签
+    type="radio"
+    value: 单选框的值
+    name: 组，name一样同一组
+    -->
+    <p>
+        <input type="radio" value="boy" name="sex" checked disabled/> 男
+        <input type="radio" value="girl" name="sex"/> 女
+    </p>
+
+    <!--多选框
+    type="checkbox"
+    ?username=Lecter&passwd=&hobby=sleep&hobby=code&hobby=chat
+    -->
+    <p>
+        <input type="checkbox" value="sleep" name="hobby">睡觉
+        <input type="checkbox" value="code" name="hobby" checked>代码
+        <input type="checkbox" value="chat" name="hobby">聊天
+        <input type="checkbox" value="game" name="hobby">游戏
+    </p>
+
+    <!--按钮
+    type="button" 图像按钮
+    type="image" 图像按钮
+    type="submit" 提交按钮
+    type="reset" 重置按钮
+    value="点击变长" 按钮上面的字
+    -->
+    <p>
+        <input type="button" name="btn1" value="点击变长">
+        <input type="image" src="../resources/image/dog2.webp" width="100" height="100"> 点击提交
+    </p>
+    <p>
+        <input type="submit">
+        <input type="reset" value="清空表单">
+    </p>
+
+    <!--下拉框，列表框-->
+    <p> 国家：
+        <select name="列表名称" id="">
+            <option value="cn">中国</option>
+            <option value="us">美国</option>
+            <option value="en">英国</option>
+            <option value="sw" selected>瑞士</option>
+            <option value="in">印度</option>
+        </select>
+    </p>
+
+    <!--文本域-->
+    <p>反馈
+        <textarea name="textarea" id="123" cols="30" rows="10">deddwqdwqededededede</textarea>
+    </p>
+    
+    <!--文件域-->
+    <p>
+        <input type="file" name="files">
+        <input type="button" value="上传" name="upload">
+    </p>
+
+    <!--邮件验证-->
+    <p>邮箱：
+        <input type="email" name="email">
+    </p>
+
+    <!--url验证-->
+    <p>url:
+        <input type="url" name="url">
+    </p>
+
+    <!--数字验证-->
+    <p>数字：
+        <input type="number" name="num" max="100" min="0" step="10">
+    <!--    Kite: HTML Tutorial-->
+    </p>
+
+    <!--滑块
+    input type="range"
+    -->
+    <p>滑块：
+        <input type="range" name="volume" min="0" max="100" step="1">
+    </p>
+
+    <!--搜索框-->
+    <p>搜索：
+        <input type="search" name="search">
+    </p>
+
+    <!--增强鼠标可用性·-->
+    <p>
+        <label for="mark">你点我试试</label>
+        <input type="text" id="mark">
+    </p>
+
+    <!--表单初级验证
+    提示信息
+    非空判断
+    正则表达式
+    -->
+    <!--
+    placeholder: 提示信息
+    -->
+    <p>
+        <input type="text" name="gg" placeholder="请输入gg">
+    </p>
+
+    <!--
+    required: 不能为空，非空判断
+    可以用于所有文本框内
+    -->
+    <p>
+        <input type="text" name="required" required>
+    </p>
+
+    <!--
+    pattern: 正则表达式
+    搜索关键字：常用正则表达式
+    -->
+    <p>
+        <input type="text" name="DIYmail" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$">
+    </p>
+
+</form>
+
+</body>
+</html>
